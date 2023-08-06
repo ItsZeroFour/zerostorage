@@ -1,0 +1,43 @@
+@import "../../sass/mixins";
+
+.dashboard {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.dashboard__top {
+  @include flexaligncenter;
+  justify-content: space-between;
+
+  a {
+    padding: 1rem 2rem;
+
+    border-radius: var(--border-radius-sm);
+    background: var(--color-light-red);
+    color: var(--color-white);
+
+    transition: var(--transition);
+
+    @media (min-width: 1071px) {
+      &:hover {
+        box-shadow: 0px 0px 10px var(--color-light-red);
+      }
+    }
+  }
+}
+
+.dashboard__top__block {
+  padding: 1rem 4rem;
+  text-align: center;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-sm);
+
+  h3 {
+    border-bottom: 1px solid var(--color-gray);
+    padding: 0.5rem;
+  }
+
+  h2 {
+    margin-top: 1rem;
+  }
+}

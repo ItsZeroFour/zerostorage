@@ -1,0 +1,22 @@
+@mixin flexcolumn() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexaligncenter() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-without-column() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,42 @@
+@import "../../../sass/mixins";
+
+.login {
+  @include flex-center;
+
+  margin-top: 8rem;
+
+  p {
+    margin-top: 2rem;
+    width: 40%;
+
+    a {
+      color: var(--color-light-red);
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    width: 40%;
+  }
+}
+
+.login__form {
+  @include flexcolumn;
+  width: 40%;
+  margin-top: 1rem;
+
+  input {
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: 2px solid var(--color-light-red);
+    border-radius: var(--border-radius-sm);
+  }
+
+  button {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--color-light-red);
+    color: var(--color-white);
+    border-radius: var(--border-radius-sm);
+  }
+}

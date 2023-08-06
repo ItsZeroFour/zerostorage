@@ -1,0 +1,22 @@
+:root {
+  --color-white: #fff;
+  --color-black: #111;
+  --color-light-red: #f57373;
+  --color-yellow: #e8e232;
+  --color-blue: #325ae8;
+  --color-gray: #ececec;
+  --color-dark-gray: gray;
+  --color-light-gray: rgba(248, 248, 252, 0.37);
+
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 1.5rem;
+
+  --z-index-0: 0;
+  --z-index-2: 2;
+  --z-index-10: 10;
+  --z-index-99: 99;
+  --z-index-999: 999;
+
+  --transition: 0.2s ease-in-out;
+}

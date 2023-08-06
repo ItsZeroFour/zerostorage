@@ -1,0 +1,244 @@
+@import "../../sass/mixins";
+
+.catalog {
+  margin-bottom: 5rem;
+}
+
+.catalog__list {
+  @include flexcolumn;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
+  gap: 2rem;
+
+  .catalog__item {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    padding: 1rem;
+    background: var(--color-light-gray);
+    border-radius: var(--border-radius-md);
+
+    img {
+      width: 10rem;
+      height: auto;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+
+    .catalog__item__text {
+      @include flexcolumn;
+      height: 6rem;
+      padding: 0 1rem;
+
+      h5 {
+        margin-top: 2rem;
+        font-size: 1.1rem;
+
+        transition: var(--transition);
+
+        @media (min-width: 1071px) {
+          &:hover {
+            color: var(--color-light-red);
+          }
+        }
+
+        @media (max-width: 350px) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .catalog__reviews {
+      margin-top: 1rem;
+      width: auto;
+      text-align: center;
+
+      p {
+        padding: 0.5rem;
+        border: 1px solid var(--color-gray);
+        border-radius: var(--border-radius-md);
+      }
+
+      @media (max-width: 313px) {
+        margin-top: 0;
+      }
+    }
+
+    .catalog__other {
+      display: inline-block;
+      width: auto;
+      margin-top: 2rem;
+
+      h2 {
+        margin-top: 1rem;
+      }
+
+      @media (max-width: 580px) {
+        @include flexaligncenter;
+        gap: 1rem;
+      }
+
+      @media (max-width: 350px) {
+        gap: 0.5rem;
+      }
+
+      @media (max-width: 313px) {
+        margin-top: 0;
+      }
+    }
+
+    .catalog__buttons {
+      display: flex;
+      margin-top: 1rem;
+
+      button {
+        @include flexaligncenter;
+        background: none;
+
+        padding: 0.5rem;
+        margin: 0.5rem;
+
+        border: 1px solid var(--color-gray);
+        border-radius: var(--border-radius-sm);
+
+        transition: var(--transition);
+
+        @media (min-width: 1071px) {
+          &:hover {
+            background: var(--color-light-red);
+
+            p {
+              color: var(--color-white);
+            }
+          }
+        }
+      }
+
+      button + button {
+        text-align: center;
+        padding: 0.5rem;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+
+        p {
+          text-align: center;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    @media (max-width: 812px) {
+      width: 100%;
+    }
+
+    @media (max-width: 580px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.catalog__item__main {
+  display: flex;
+
+  @media (max-width: 313px) {
+    flex-direction: column;
+  }
+}
+
+.catalog__not__found {
+  text-align: center;
+  margin-top: 6rem;
+  line-height: 1.8;
+
+  img {
+    width: 20rem;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  p {
+    color: var(--color-dark-gray);
+  }
+}
+
+.caralog__group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 1rem;
+  gap: 2rem;
+
+  li {
+    width: 18rem;
+    max-height: 20rem;
+    padding: 1rem;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--border-radius-sm);
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 10rem;
+      height: 10rem;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+  }
+
+  .catalog__other {
+    h2 {
+      margin-top: 1rem;
+    }
+  }
+
+  .catalog__buttons {
+    @include flexaligncenter;
+
+    gap: 1rem;
+    margin-top: 1rem;
+
+    button {
+      padding: 1rem;
+      font-size: 0.9rem;
+
+      background: none;
+
+      border: 1px solid var(--color-gray);
+      border-radius: var(--border-radius-sm);
+
+      transition: var(--transition);
+
+      @media (min-width: 1071px) {
+        &:hover {
+          background: var(--color-light-red);
+
+          p,
+          svg {
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+  }
+}
+
+.catalog__infavorites {
+  background: var(
+    --color-light-red
+  ) !important; // because we use background in style buttons
+  transition: var(--transition);
+
+  svg {
+    color: var(--color-white);
+  }
+}

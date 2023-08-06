@@ -1,0 +1,118 @@
+@import "../../sass/mixins";
+
+.createProduct {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.createProduct__container {
+  display: flex;
+}
+
+.createProduct__main,
+.createProduct__form,
+.createProduct__сharacteristics,
+.createProduct__view {
+  @include flexcolumn;
+}
+
+.createProduct__main {
+  width: 50%;
+}
+
+.createProduct__form {
+  input,
+  textarea {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid var(--color-light-red);
+    border-radius: var(--border-radius-sm);
+  }
+
+  textarea {
+    height: 15rem;
+    resize: none;
+  }
+}
+
+.createProduct__сharacteristics {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-gray);
+
+  button {
+    padding: 1rem;
+    margin-top: 1rem;
+
+    background: var(--color-light-red);
+    color: var(--color-white);
+    border-radius: var(--border-radius-sm);
+  }
+}
+
+.createProduct__view {
+  width: 50%;
+  overflow-x: hidden;
+  line-height: 1.2rem;
+
+  p,
+  h2,
+  h3,
+  h4 {
+    padding: 1rem;
+  }
+}
+
+.createProduct__images {
+  width: 15%;
+  height: 100vh;
+}
+
+.createProduct__images {
+  margin-top: 2rem;
+
+  label {
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
+    border: 2px dashed var(--color-light-red);
+  }
+}
+
+.createProduct__create__button {
+  padding: 1rem;
+  width: 100%;
+
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  border-radius: var(--border-radius-sm);
+
+  transition: var(--transition);
+
+  @media (min-width: 1071px) {
+    &:hover {
+      background: var(--color-black);
+      color: var(--color-white);
+    }
+  }
+}
+
+.createProduct__delete {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: none;
+
+  border: 1px solid var(--color-light-red);
+  border-radius: var(--border-radius-sm);
+
+  transition: var(--transition);
+
+  @media (min-width: 1071px) {
+    &:hover {
+      background: var(--color-light-red);
+      color: var(--color-white);
+    }
+  }
+}

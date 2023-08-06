@@ -1,0 +1,90 @@
+@import "../../../sass/mixins";
+
+.account {
+  @include flex-center;
+
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.account__top {
+  @include flex-center-without-column;
+
+  padding: 1rem;
+  width: 60%;
+  border-bottom: 1px solid var(--color-gray);
+
+  svg {
+    font-size: 2rem;
+    padding: 1rem 1.1rem;
+    border-radius: 50%;
+    border: 2px dashed var(--color-gray);
+  }
+}
+
+.account__top__main {
+  margin-left: 1rem;
+}
+
+.account__main__info {
+  margin-top: 2rem;
+  width: 50%;
+
+  li {
+    padding: 1rem;
+    margin: 1rem;
+    width: 20rem;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--border-radius-sm);
+
+    h5 {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.account__dashboard__link {
+  @include flexaligncenter;
+
+  padding: 1rem;
+  margin-top: 2rem;
+
+  border: 1px solid var(--color-light-red);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-black);
+
+  transition: var(--transition);
+
+  svg {
+    margin-left: 0.5rem;
+  }
+
+  @media (min-width: 1071px) {
+    &:hover {
+      background: var(--color-light-red);
+      color: var(--color-white);
+    }
+  }
+}
+
+.account__createdAt {
+  @include flex-center-without-column;
+
+  margin-top: 3rem;
+  padding: 1rem;
+  width: 60%;
+  border-top: 1px solid var(--color-gray);
+
+  h5 {
+    margin-left: 0.5rem;
+  }
+}
+
+.account__logout {
+  display: flex;
+  align-items: center;
+  background: none;
+  gap: 0.5rem;
+  
+  color: var(--color-light-red);
+}

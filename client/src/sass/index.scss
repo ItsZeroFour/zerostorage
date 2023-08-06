@@ -1,0 +1,124 @@
+/* ======================= IMPORTS ======================= */
+@import "./fonts";
+@import "./reset";
+@import "./vars";
+
+/* ======================= MAIN STYLESHIP ======================= */
+html,
+body,
+#root {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  background: var(--color-white);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 75px;
+}
+
+.container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  max-width: 1040px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-black);
+  font-weight: 400;
+}
+
+textarea {
+  font-family: "Rubik", sans-serif;
+}
+
+.App {
+  overflow: hidden;
+}
+
+/* ======================= PAGINATION ======================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 370px) {
+    gap: 0.5rem;
+  }
+}
+
+.pagination__link {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  border: 1px solid var(--color-light-red);
+  border-radius: var(--border-radius-sm);
+
+  transition: var(--transition);
+
+  @media (min-width: 1071px) {
+    &:hover {
+      background: var(--color-light-red);
+      color: var(--color-white);
+    }
+  }
+
+  @media (max-width: 825px) {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  @media (max-width: 745px) {
+    width: 1.9rem;
+    height: 1.9rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 585px) {
+    border: none;
+    border-radius: 0%;
+  }
+}
+
+.pagination__active {
+  background: var(--color-light-red);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-white);
+
+  @media (max-width: 585px) {
+    background: none;
+    border-radius: 0%;
+    
+    color: var(--color-black);
+    border-bottom: 2px solid var(--color-light-red);
+  }
+}
+
+.pagination__previous,
+.pagination__next {
+  color: var(--color-blue);
+  cursor: pointer;
+}
