@@ -12,7 +12,7 @@ import multer from "multer";
 
 const app = express();
 
-dotenv.config({ path: "./.env" });
+// dotenv.config({ path: "./.env" });
 
 /* CONSTANTS */
 const PORT = process.env.PORT || 5000;
