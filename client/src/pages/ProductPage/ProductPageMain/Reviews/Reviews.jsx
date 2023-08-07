@@ -41,11 +41,14 @@ const Reviews = ({ id, isAuth, productTitle }) => {
 
   useEffect(() => {
     reviews &&
+      isAuth &&
       reviews.map(({ author }) => {
         if (isAuth._id === author._id) {
           setUserReviewIsExists(true);
         }
       });
+
+    if (!isAuth) setUserReviewIsExists(true);
   }, [isAuth, reviews]);
 
   useEffect(() => {
@@ -232,3 +235,4 @@ const Reviews = ({ id, isAuth, productTitle }) => {
 };
 
 export default Reviews;
+
